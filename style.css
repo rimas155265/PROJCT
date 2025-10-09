@@ -1,0 +1,252 @@
+:root {
+    --color-primary: #988670; /*  الأزرار */
+    --color-secondary: #833D10; /*  العناوين */
+    --color-dark: #291F10; /* النص الرئيسي */
+    --color-dark-bg: #4B392F; /* خلفية الشريط العلوي */
+    --color-light-bg: #F0E1CA; /* خلفية الصفحة */
+    --color-card-bg: #A8907D; /* خلفية المحامص */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', 'Arial', sans-serif; 
+    direction: rtl; 
+}
+
+body {
+    background-color: var(--color-light-bg);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+/*الهيدر*/
+
+.header {
+    background-color: var(--color-dark-bg);
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* اللوقو*/
+.logo-img {
+    height: 40px; 
+    width: auto; 
+    display: block;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 25px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* خط اسفل*/
+.nav ul li a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+
+/* المحتوى الرئيسي والعناوين */
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: var(--color-secondary);
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+/*  تنسيق المحامص  */
+
+
+.roasteries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.roastery-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease, box-shadow 0.3s ease; 
+    border-right: 5px solid var(--color-primary); 
+}
+
+/* تأثير البروزللبطاقة */
+.roastery-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.roastery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* تاثير الصوره*/
+.roastery-card img:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px dashed #ddd;
+    margin-top: 15px;
+}
+
+.features-list li {
+    background-color: #ECBA90;
+    color: var(--color-dark);
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card-links a {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* تأثيرالبروز*/
+.card-links a:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05); 
+}
+
+/*  التواصل  */
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* التقييمات */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--color-secondary); 
+}
+
+.reviewer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.reviewer-info h4 {
+    color: var(--color-dark);
+    margin: 0;
+    font-size: 18px;
+}
+
+.review-rating {
+    color: #FFC107; 
+    font-size: 1.3em;
+}
+
+.review-rating span {
+    color: var(--color-secondary); 
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.review-content p {
+    font-style: italic;
+    color: #555;
+}
