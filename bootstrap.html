@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكونات تفاعلية</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔷 الهيدر الموحد -->
+<div class="header">
+  <div class="logo">
+    <img src="images/logo.png.jpg" 
+         alt="شعار ملتقى البن" 
+         class="logo-img"
+         title="ملتقى البن: دليلك المختص لأفضل محامص القهوة المختصة في المملكة.">
+  </div>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="roasteries.html">المحامص</a></li>
+      <li><a href="reviews.html">التقييمات</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+      <li><a href="bootstrap.html">مكونات تفاعلية</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- 🧩 محتوى الصفحة -->
+<div class="container">
+  <h2>مكونات تفاعلية باستخدام Bootstrap</h2>
+  <p style="margin-bottom: 30px; color: var(--color-secondary);">
+    في هذه الصفحة نعرض بعض المكونات التفاعلية التي يمكن إضافتها لتحسين تجربة المستخدم في ملتقى البن.
+  </p>
+
+  <!-- 📝 نموذج تقييم -->
+  <div class="contact-form mb-5">
+    <h4>قيّم محمصتك المفضلة</h4>
+    <form>
+      <label for="roastery">اختر المحمصة:</label>
+      <select class="form-select mb-3" id="roastery">
+        <option>خطوة جمل</option>
+        <option>كيرفر</option>
+        <option>سويل</option>
+      </select>
+
+      <label for="rating">التقييم:</label>
+      <input type="range" class="form-range mb-3" min="1" max="5" id="rating">
+
+      <button type="submit" class="btn btn-primary">إرسال التقييم</button>
+    </form>
+  </div>
+
+  <!-- 📦 بطاقات معلومات -->
+  <h4 class="mb-3">بطاقات معلومات المحامص</h4>
+  <div class="row mb-5">
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 text-end">
+        <div class="card-body">
+          <h5 class="card-title">كيرفر</h5>
+          <p class="card-text">مختص بالإسبريسو ويقدم تجربة مقهى عصرية.</p>
+          <a href="https://curcoffee.com" class="btn btn-outline-secondary">زيارة الموقع</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 text-end">
+        <div class="card-body">
+          <h5 class="card-title">سويل</h5>
+          <p class="card-text">محمصة سعودية بخبراء معتمدين، تركز على الجودة.</p>
+          <a href="https://soilroasters.com/products" class="btn btn-outline-secondary">زيارة الموقع</a>
+        </div>
+      </div>
